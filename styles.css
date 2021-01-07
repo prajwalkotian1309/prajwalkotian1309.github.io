@@ -1,0 +1,303 @@
+* {box-sizing: border-box}
+body 
+{
+  font-family: "Lato", sans-serif;
+  background: linear-gradient(rgba(1,1,1,0.8), rgba(1,1,1,0.8)), url("d.jpg");
+  background-attachment: fixed;
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size: cover; /* Resize the background image to cover the entire container */
+      background-color: #000000; /* Used if the image is unavailable */
+      background-position: center; /* Center the image */
+  color:#FFFFFF;
+
+}
+
+
+
+/*******************
+
+Custom Scrollbar START
+
+**********************/
+
+/* width */
+::-webkit-scrollbar 
+{
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track 
+{
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb 
+{
+  background: red; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover 
+{
+  background: #b30000; 
+}
+
+/*******************
+
+Custom Scrollbar  END
+
+**********************/
+
+
+
+/* Style the tab */
+.tab 
+{
+  float: left;
+  /* border: 1px solid #ccc;  */
+  background-color: transparent;
+  width: max-content;
+  height: 100%;
+  margin-right:50px;
+}
+
+/* Style the buttons inside the tab */
+.tab button 
+{
+  display: block;
+  background-color: inherit;
+  color: white;
+  padding: 2px 16px;
+  width: 100%;
+  border: none;
+  margin-right:auto;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover 
+{
+  background-color: transparent; /*    #ddd        */
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active 
+{
+  background-color: #FF4500;
+  border-radius: 20px;
+}
+
+/* Style the tab content */
+.tabcontent 
+{
+  float: left;
+  padding: 0px 12px;
+  /*   border: 1px solid #ccc;  */
+  width: 82%;
+  border-left: none;
+  height: 100%;
+}
+
+
+@font-face 
+{
+    font-family: customBold;
+    src: url(majalla.ttf);
+}
+
+
+
+
+.tablinks
+{
+   font-size:36px;
+   font-weight:300;
+   text-align:center;
+   position:relative;
+   height:40px;
+   line-height:0px;
+   margin-top:10px;
+   overflow:hidden;
+   width:90%;
+   margin-left:5%;
+   cursor:pointer;
+}
+.tablinks:after
+{
+   content:'';
+   position:absolute;
+   width:80%;
+   border-bottom:1px solid rgba(255, 255, 255, 0.5);
+   bottom:50%;
+   left:-100%;
+   transition-delay: all 0.5s;
+   transition: all 0.5s;
+}
+
+.tablinks:hover:after,
+.tablinks.hover:after
+{
+   left:100%;
+}
+.tablinks .text
+{
+   text-shadow:0px -40px 0px rgba(255, 255, 255, 1);
+   transition:all 0.75s;
+   transform:translateY(100%) translateZ(0);
+   transition-delay:all 0.25s;
+}
+.tablinks:hover .text,
+.tablinks.hover .text
+{
+   text-shadow:0px -40px 0px rgba(255, 255, 255, 0);
+   transform:translateY(0%) translateZ(0) scale(1.1);
+   font-weight:600;
+}
+
+
+/**************************
+	PRELOADER
+
+***************************/
+
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:400,700,300);
+
+/**,html{margin:0;padding:0}*/
+
+//variables
+$baseColor : #e74c3c;
+$fontColor : #fff;
+
+body{
+  background: $baseColor;
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+}
+svg{
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  display:inline-block;
+}
+
+
+
+/* Prelaoder */
+
+#preloader 
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: $baseColor;
+}
+
+#preloader:before 
+{
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border-top: 14px solid #0078ff;
+  border-right: 14px solid green;
+  border-bottom: 14px solid red;
+  border-left: 14px solid pink;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader
+{
+  0% 
+  {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% 
+  {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader 
+{
+  0% 
+  {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+/*
+
+.img-with-text {
+    text-align: justify;
+    width: [width of img];
+}
+
+.img-with-text img {
+    display: block;
+    margin: 0 auto;
+}*/
+
+.img-with-text
+{
+   margin:15px;
+   margin-bottom:0;
+}
+
+#box1 { 
+                float:left;  
+                
+                
+                height:280px;
+            
+            } 
+            #box2{ 
+                float:left;  
+                
+                
+                height:280px;
+            } 
+            #box3{ 
+                float:left; 
+                
+                
+                height:280px; 
+            }
+ #box4{ 
+                float:right; 
+                
+                
+                height:280px; 
+            }
+
+
+
+img
+{
+  padding: 6px;
+}
